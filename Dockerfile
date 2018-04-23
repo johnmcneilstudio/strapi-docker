@@ -11,7 +11,7 @@ LABEL maintainer="Sorob Louie <perret.luca@gmail.com>" \
 
 WORKDIR /usr/src/api
 
-RUN npm install -g git@github.com:johnmcneilstudio/strapi.git
+RUN npm install -g git+https://git@github.com/johnmcneilstudio/strapi.git
 
 COPY strapi.sh ./
 RUN chmod +x ./strapi.sh
