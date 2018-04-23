@@ -1,6 +1,6 @@
 FROM node:9.9.0-alpine
 
-LABEL maintainer="Luca Perret <perret.luca@gmail.com>" \
+LABEL maintainer="Sorob Louie <perret.luca@gmail.com>" \
       org.label-schema.vendor="Strapi" \
       org.label-schema.name="Strapi Docker image" \
       org.label-schema.description="Strapi containerized" \
@@ -11,7 +11,7 @@ LABEL maintainer="Luca Perret <perret.luca@gmail.com>" \
 
 WORKDIR /usr/src/api
 
-RUN npm install -g strapi@3.0.0-alpha.11.3
+RUN npm install -g git@github.com:johnmcneilstudio/strapi.git
 
 COPY strapi.sh ./
 RUN chmod +x ./strapi.sh
